@@ -1,0 +1,4 @@
+@EndUserText.label: 'Customer payment API - OData V4'
+define service ZI_JENTRY_V4 {
+  expose ZI_JENTRY_RPV;
+}

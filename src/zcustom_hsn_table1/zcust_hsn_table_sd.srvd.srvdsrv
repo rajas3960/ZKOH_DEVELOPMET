@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service defination'
+define service ZCUST_HSN_TABLE_SD {
+  expose ZCUST_HSN_TB_PRV;
+}

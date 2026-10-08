@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service defenation of Customer Led Stat'
+define service ZFI_CUST_LED_STAT_SD {
+  expose ZFI_CUST_LEG_STAT_PROJECTION as custledAPI;
+}

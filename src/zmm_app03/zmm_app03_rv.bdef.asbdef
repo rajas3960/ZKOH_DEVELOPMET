@@ -1,0 +1,49 @@
+managed implementation in class zbp_mm_app03_rv unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZMM_APP03_RV alias _hdr
+//persistent table zmm_app03_tb
+with unmanaged save
+draft table zmm_app03_dtb
+lock master total etag Createdon
+etag master Createdon
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete(features : instance);
+   static action upexl deep parameter ZMM_APPS01_EXLP result [1] entity ZMM_APP03_RV;
+
+   field (readonly,numbering : managed )Uuid;
+   determination gtdata on save { create; update; }
+
+
+  field ( mandatory : create ,readonly : update ) Matnr;
+  field (readonly) Createdby,Createdon,Lastchngat,Lastchngby,Status;
+  validation vtron on save { create; field Matnr;}
+    draft action(features : instance) Edit;
+  draft action Resume;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+  association _item { create ; with draft; }
+mapping for zmm_app03_tb corresponding;
+}
+define behavior for ZMM_APP03_IRV alias _item//alias <alias_name>
+//persistent table zmm_app03_ditb
+with unmanaged save
+draft table zmm_app03_ditb
+lock dependent by _HDR
+authorization dependent by _HDR
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Createdby,Createdon;
+  field ( readonly ) Uuid,Tax,Matnr,Hsn;
+  field(readonly,numbering : managed) Item;
+  association _HDR { with draft;}
+  mapping for zmm_app03_itb corresponding;
+}

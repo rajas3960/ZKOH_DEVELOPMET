@@ -1,0 +1,4 @@
+@EndUserText.label: 'Material Consumption Cost Service Def'
+define service ZMATCONSPCOSTSERVD {
+  expose ZMAT_CONSP_COST_PROJ as MaterialConsumption;
+}

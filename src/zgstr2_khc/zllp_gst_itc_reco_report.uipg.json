@@ -1,0 +1,26 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Launchpad page for GST ITC Reco Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "GST ITC Reco"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "title": "GST ITC Reco",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZGST_ITC_UI5R",
+            "tileId": "UI5R_AACA42FD4C79D02839693490FD62B98B668867EF_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

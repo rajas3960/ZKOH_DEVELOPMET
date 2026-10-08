@@ -1,0 +1,39 @@
+projection;
+strict ( 2 );
+use draft;
+use side effects;
+
+define behavior for ZMM_APP01_PV //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use action loadexcl;
+    side effects { action loadexcl affects entity _ITEM ;}
+
+  use action Edit;
+  use action Resume;
+  use action Activate;
+  use action Discard;
+  use action Prepare;
+
+  use association _ITEM { create; with draft; }
+}
+
+define behavior for ZMM_APP01_IPV //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _HDR { with draft; }
+  use association _ITEM1 {with draft; }
+}
+define behavior for ZMM_APP01_IPV2 //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _HDR { with draft; }
+  use association _item2 { with draft; }
+}

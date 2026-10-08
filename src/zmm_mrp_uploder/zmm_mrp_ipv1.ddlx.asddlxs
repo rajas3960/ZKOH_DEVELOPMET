@@ -1,0 +1,79 @@
+@Metadata.layer: #PARTNER
+annotate entity ZMM_MRP_IPV1 with
+{
+  @UI.facet: [{ id: 'Itmdata',
+        purpose: #STANDARD,
+        type: #IDENTIFICATION_REFERENCE,
+        label: 'File Data', position: 10     } ]
+  @UI.hidden: true
+  Recguid;
+  @UI: { lineItem: [{ position: 10, label: 'SNo' }],
+  identification: [{ position: 10, label: 'SNo' }]}
+  //  @UI.hidden: true
+  Sno;
+  @UI: { lineItem: [{ position: 11, label: 'Plant' }],
+  identification: [{ position: 11, label: 'Plant' }]}
+  Plant;
+  @UI: { lineItem: [{ position: 20, label: 'Material' }],
+  identification: [{ position: 20, label: 'Material' }]}
+  @Search.defaultSearchElement: true
+  Material;
+  @UI: { lineItem: [{ position: 30, label: 'Material Desc.' }],
+  identification: [{ position: 30, label: 'Material Desc.' }]}
+  @Search.defaultSearchElement: true
+  Matdesc;
+  @UI: { lineItem: [{ position: 40, label: 'Req. Qty' }],
+  identification: [{ position: 40, label: 'Req. Qty' }]}
+  Reqqty;
+  @UI: { lineItem: [{ position: 50, label: 'Qty Unit' }],
+  identification: [{ position: 50, label: 'Qty Unit' }]}
+  Uom;
+  @UI: { lineItem: [{ position: 60, label: 'Delv. Date' }],
+  identification: [{ position: 60, label: 'Delv. Date' }]}
+  Delvdat;
+  @UI: { lineItem: [{ position: 70, label: 'Price' }],
+  identification: [{ position: 70, label: 'Price' }]}
+  Price;
+  @UI: { lineItem: [{ position: 80, label: 'Currency' }],
+  identification: [{ position: 80, label: 'Currency' }]}
+  Curr;
+  @UI: { lineItem: [{ position: 90, label: 'Account Assignment Categoty' }],
+  identification: [{ position: 90, label: 'Account Assignment Category' }]}
+  Accasscat;
+  @UI: { lineItem: [{ position: 100, label: 'Project WBS ID' }],
+  identification: [{ position: 100, label: 'Project WBS ID' }]}
+  Wbsid;
+  @UI: { lineItem: [{ position: 110, label: 'Purchase Group' }],
+  identification: [{ position: 110, label: 'Purchase Group' }]}
+  Purgrp;
+  @UI: { lineItem: [{ position: 120, label: 'Service Start Date' }],
+  identification: [{ position: 120, label: 'Service Start Date' }]}
+  Serstdt;
+  @UI: { lineItem: [{ position: 130, label: 'Service End Date' }],
+  identification: [{ position: 130, label: 'Service End Date' }]}
+  Serenddt;
+  @UI: { lineItem: [{ position: 140, label: 'Tax Code' }],
+  identification: [{ position: 140, label: 'Tax Code' }]}
+  Taxcd;
+  @UI: { lineItem: [{ position: 150, label: 'PO Price Type' }],
+  identification: [{ position: 150, label: 'PO Price Type' }]}
+  Popricetp;
+  @UI: { lineItem: [{ position: 160, label: 'Expense GL' }],
+  identification: [{ position: 160, label: 'Expense GL' }]}
+  Expgl;
+  @UI.hidden: true
+  Sloc;
+  @UI.hidden: true
+  Supplnt;
+  @UI.hidden: true
+  Issloc;
+  @UI.hidden: true
+  Itmcid;
+  @UI.hidden: true
+  Actcid;
+  /* Associations */
+  @UI.hidden: true
+  _header;
+
+
+}

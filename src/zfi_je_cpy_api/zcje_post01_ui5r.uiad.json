@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Customer Payment - JE Post",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Customer Payment - JE Post"
+  },
+  "ui5AppDetails": {
+    "appId": "zcjepost"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A298323CEB26F0F5D2A95304746CE0A68383CFDF_TM",
+    "semanticObject": "YY1_CJE_POST",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A298323CEB26F0F5D2A95304746CE0A68383CFDF_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Customer Payment - JE Post"
+      }
+    }
+  ]
+}

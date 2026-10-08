@@ -1,0 +1,4 @@
+@EndUserText.label: 'purchase contract srvd'
+define service Zmm_purchase_contract_srvd {
+  expose ZMM_PURCHASE_CONTRACT_PV as PurchaseContract;
+}

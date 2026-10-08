@@ -1,0 +1,76 @@
+managed implementation in class zbp_fi_app2_rv unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZFI_APP2_RV alias _HDR
+//persistent table <???>
+
+with unmanaged save
+draft table zfi_app1_db1
+lock master
+total etag Lastchangedat
+authorization master ( instance )
+etag master Lastchangedat
+{
+//  create;
+  update( features : instance );
+  delete( features : instance );
+  field ( readonly, numbering : managed ) Uuid;
+  field ( readonly ) Gpnum, Gptype, Postingdate, Documentdate, Gateno, Gitdat, Gittim, Plant;
+  field ( readonly ) Createdby, Gate, Carriedby, Lastinvno, Registerno, Refno, Refbldate, Location;
+  field ( readonly ) Goingwhere, Gstin, Suppilername, Statustext, gateinstatus, gateoutstatus;
+  field ( readonly ) Gotno, Gotdat, Gottim, Gomark;
+
+  association _item { internal create; with draft; }
+  association _work { internal create; with draft; }
+
+  draft action Resume;
+  draft action( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+
+  action(features : instance ) GateOut result [1] $self;
+  action(features : instance ) GateEntry result [1] $self;
+  determination Updatehd on save { create; field Purpose; }
+  mapping for zfi_app1_tb1 corresponding;
+
+}
+
+define behavior for ZFI_APP2_CIV alias _Item
+
+//persistent table zfi_app1_tb2
+with unmanaged save
+draft table zfi_app1_db2
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update( features : instance );
+  delete( features : instance );
+  field ( readonly ) Uuid, Transposno, Itemno;
+  field ( readonly ) Assetmat, Assetmatdes, Qty, Uom, Batch, Fromplant, Fromlocation, Fromplantname, Overallstatus;
+  field ( readonly ) Toplant, Tolocation, Toplantname, Inventoryno, Createdby, Createdat, Lastchangedat, Lastchangedby, Serialnumber;
+
+  association _Header { with draft; }
+  determination UpdateItem on modify { create; field Recivedqty; }
+  mapping for zfi_app1_tb2 corresponding;
+
+}
+
+define behavior for ZFI_APP2_SWRV alias _Work
+//persistent table zfi_app1_tb3
+with unmanaged save
+draft table zfi_app1_db3
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update( features : instance );
+  delete( features : instance );
+  field ( readonly ) Uuid, Poorder, Poitem,Materialnumber,Poqty,Pounit,Productdes,
+                     Documcurrency, Pocost, Createdat,Createdby,Lastchangedat,Lastchangedby;
+  association _Header{with draft;}
+  determination UpdateItem on modify { create;update; field Recqty,Penqty; }
+  validation Validqty on save { create;update; field Recqty; }
+}

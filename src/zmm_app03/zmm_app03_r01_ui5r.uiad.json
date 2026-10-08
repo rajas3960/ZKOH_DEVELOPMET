@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Custom HSN Upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zmmexp02"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8E3A0606D8ABE5DBF3BBDE8ADFA982B1E5DDF867_TM",
+    "semanticObject": "YY1_MMEXP02",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8E3A0606D8ABE5DBF3BBDE8ADFA982B1E5DDF867_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Custom HSN Upload",
+        "subtitle": "Application"
+      }
+    }
+  ]
+}

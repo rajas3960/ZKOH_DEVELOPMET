@@ -1,0 +1,57 @@
+managed implementation in class zbp_mm_app02_hrv unique;
+strict(2);
+with draft;
+extensible;
+define behavior for ZMM_APP02_HRV alias _hdr//alias <alias_name>
+//with unmanaged save
+persistent table zmm_app02_tb
+extensible
+draft table ZMM_APP02_DB
+lock master total etag Createdon
+etag master Createdon
+//persistent table zmm_app02_tb
+
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly : update ) Matnr;
+  static action upexl deep parameter ZMM_APPS01_EXLP ;
+  field ( readonly) Createdby,Createdon,Lastchngby,Lastchngat;
+   draft action Edit;
+  draft action Resume;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+  association _ITEM { create; with draft;}
+  mapping for zmm_app02_tb corresponding extensible
+  {
+  Matnr = matnr;
+  Hsn = hsn;
+  Tax = tax;
+  Createdby = createdby;
+  Createdon = createdon;
+  Lastchngat = lastchngat;
+  Lastchngby = lastchngby;
+  Status = status;
+
+  }
+}
+
+define behavior for ZMM_APP02_IRV alias _item//alias <alias_name>
+persistent table zmm_app02_itb
+//with unmanaged save
+draft table ZMM_APP02_Idt
+lock dependent by _HDR
+authorization dependent by _HDR
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Createdby,Createdon;
+  field ( readonly ) Matnr,Slno;
+  association _HDR { with draft;}
+  mapping for zmm_app02_itb corresponding;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "RGB-NRGB Finance Department",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "RGP/NRGP Finance Dep"
+  },
+  "ui5AppDetails": {
+    "appId": "zrgbnrgbfinapp.zfirgbnrgbfinapp"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_EA371DB31F56B99D2518E18C6FEDDA1FF4283C6B_TM",
+    "semanticObject": "zfi_rgbnrgp_finapp",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_EA371DB31F56B99D2518E18C6FEDDA1FF4283C6B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "RGP/NRGP Finance Dep"
+      }
+    }
+  ]
+}

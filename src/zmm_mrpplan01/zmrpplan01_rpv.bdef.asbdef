@@ -1,0 +1,40 @@
+projection;
+strict ( 2 );
+use draft;
+define behavior for ZMRPPLAN01_RPV //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use action CrtPr;
+  use action UpdPr;
+    use action CrtPo;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+
+  use association _litem { create; with draft; }
+  use association _pritm { with draft; }
+}
+
+define behavior for ZMRPPLAN01_IPV1 //alias <alias_name>
+
+{
+  use update;
+  use delete;
+
+  use association _hdr { with draft; }
+}
+
+define behavior for ZMRPPLAN01_IPV2 //alias <alias_name>
+{
+  //  use update;
+  //  use delete;
+
+  use association _hdr { with draft; }
+}

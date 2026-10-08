@@ -1,0 +1,73 @@
+@Metadata.layer: #PARTNER
+@Search.searchable: true
+annotate entity ZMRPPLAN01_RPV with
+{
+  @UI.facet: [{
+           id: 'idinfo', type: #COLLECTION,
+           label: 'Upload File Info',
+           position: 10 },
+           {
+           id: 'idfile',
+           type: #IDENTIFICATION_REFERENCE,
+           parentId: 'idinfo' } ,
+             {
+               id: 'litem',
+               purpose: #STANDARD,
+               type: #LINEITEM_REFERENCE,
+               label: 'Line Items',
+               position: 20,
+               targetElement: '_litem' },
+               {
+               id: 'pritm',
+               purpose: #STANDARD,
+               type: #LINEITEM_REFERENCE,
+               label: 'PR Details',
+               position: 30,
+               targetElement: '_pritm' }  ]
+
+  //  @UI.lineItem: [{ position: 10, label: 'Record GUID' } ]
+  //  @UI.identification: [{ position: 10, label: 'Record GUID' },
+  @UI.hidden: true
+  Recguid;
+  @UI.lineItem: [{ position: 30, label: 'Doc. Type' } ]
+  @UI.identification: [{ position: 30, label: 'Doc. Type' } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_PRDOCTYP_VH', element: 'prtype' },
+  additionalBinding: [{  element: 'name', localElement: 'Dtyptxt' }] }]
+  Doctype;
+  //  @UI.lineItem: [{ position: 30, label: 'Source Determination' } ]
+  //  @UI.identification: [{ position: 35, label: 'Source Determination' }]
+  @UI.hidden: true
+  Srcdtm;
+  @UI.hidden: true
+  Dtyptxt;
+  @UI.lineItem: [{ position: 20, label: 'File PR Records' } ]
+  Totprrec;
+  @UI.lineItem: [{ position: 30, label: 'PR Created' } ]
+  Totprcrt;
+  @UI.lineItem: [{ position: 40, label: 'File STO Records' } ]
+  Totporec;
+  @UI.lineItem: [{ position: 50, label: 'STO Created' } ]
+  Totpocrt;
+  @UI.lineItem: [{ position: 20, label: 'Created On' } ]
+  @UI.identification: [{ position: 20, label: 'Created On' } ]
+  @Search.defaultSearchElement: true
+  Createdat;
+  @UI.lineItem: [{ position: 70, label: 'Changed By' } ]
+  Lastchngby;
+  @UI.lineItem: [{ position: 60, label: 'Changed On' } ]
+  Lastchngat;
+  @UI.lineItem: [{ position: 10, label: 'Created By' } ]
+  @UI.identification: [{ position: 10, label: 'Created By' },
+  { type: #FOR_ACTION, dataAction: 'CrtPr', label: 'Create PR' },
+  { type: #FOR_ACTION, dataAction: 'CrtPo', label: 'Create STO' },
+  { type: #FOR_ACTION, dataAction: 'UpdPr', label: 'Update PR PDT' } ]
+  Createdby;
+  @UI.hidden: true
+  Status;
+  /* Associations */
+  @UI.hidden: true
+  _litem;
+  @UI.hidden: true
+  _pritm;
+
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "GSTR2 Purchase Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "GSTR2 Purchase Report"
+  },
+  "ui5AppDetails": {
+    "appId": "gstr2purchasereport.zgstr1purchase"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_03D1F788C01C797DF3395CB5AAA8057D185A3279_TM",
+    "semanticObject": "zgstr2",
+    "action": "view",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_03D1F788C01C797DF3395CB5AAA8057D185A3279_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GSTR2 Purchase Report",
+        "subtitle": "GSTR2 Purchase Report"
+      }
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SUSH" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <HEAD>
+    <NAME>1BB77393B50B660AC5777690616491</NAME>
+    <TYPE>HT</TYPE>
+    <DISPLAY_NAME>R3TR G4BA ZPRODUCTMASTER_SVCBND</DISPLAY_NAME>
+    <DEVCLASS>ZMM</DEVCLASS>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </HEAD>
+   <USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>/SCWM/PROD</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>C_AENR_BGR</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>C_AENR_ERW</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>C_AENR_RV1</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>C_TCLA_BKA</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>F_FAGL_LDR</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>K_ML_VA</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>K_PCA_MD</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>M_MATE_MAN</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>M_MATE_MAR</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>M_MATE_MAT</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>M_MATE_NEU</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>M_MATE_STA</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>M_MATE_VKO</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>M_MATE_WGR</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>M_MATE_WRK</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>Q_MATERIAL</OBJECT>
+     <OKFLAG>V</OKFLAG>
+    </USOBX>
+    <USOBX>
+     <NAME>1BB77393B50B660AC5777690616491</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>S_START</OBJECT>
+     <OKFLAG>X</OKFLAG>
+    </USOBX>
+   </USOBX>
+   <USOBX_EXT>
+    <item>
+     <OBJECT>/SCWM/PROD</OBJECT>
+     <TTEXT>Warehouse Product</TTEXT>
+     <OCLSS>SCWM</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>/SCWM/WMEBASICS</DEVCLASS>
+     <PS_POSID>SCM-EWM-WOP</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>C_AENR_BGR</OBJECT>
+     <TTEXT>CC Change Master - Authorization Group</TTEXT>
+     <OCLSS>ECH</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>CC</DEVCLASS>
+     <PS_POSID>CA-GTF-ECM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>C_AENR_ERW</OBJECT>
+     <TTEXT>CC Eng. Chg. Mgmt. Enhanced Authorization Check</TTEXT>
+     <OCLSS>ECH</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>CC</DEVCLASS>
+     <PS_POSID>CA-GTF-ECM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>C_AENR_RV1</OBJECT>
+     <TTEXT>CC Engineering change mgmt - revision level for materials</TTEXT>
+     <OCLSS>ECH</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>CC</DEVCLASS>
+     <PS_POSID>CA-GTF-ECM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>C_TCLA_BKA</OBJECT>
+     <TTEXT>Authorization for Class Types</TTEXT>
+     <OCLSS>CLAS</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>CL</DEVCLASS>
+     <PS_POSID>CA-CL-CLS</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>F_FAGL_LDR</OBJECT>
+     <TTEXT>General Ledger: Authorization for Ledger</TTEXT>
+     <OCLSS>FI</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>FAGL_LEDGER_CUST</DEVCLASS>
+     <PS_POSID>FI-GL-GL</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>K_ML_VA</OBJECT>
+     <TTEXT>CO Material Ledger: Valuation Area</TTEXT>
+     <OCLSS>CO</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>FINS_ML_CKML</DEVCLASS>
+     <PS_POSID>CO-PC-ML</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>K_PCA_MD</OBJECT>
+     <TTEXT>EC-PCA: Authorization Object for Profit Center Master Data</TTEXT>
+     <OCLSS>CO</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>ODATA_PROFIT_CENTER_V2</DEVCLASS>
+     <PS_POSID>EC-PCA-MD</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>M_MATE_MAN</OBJECT>
+     <TTEXT>Material Master: Data at Client Level</TTEXT>
+     <OCLSS>MM_G</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>MG</DEVCLASS>
+     <PS_POSID>LO-MD-MM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>M_MATE_MAR</OBJECT>
+     <TTEXT>Material Master: Material Types</TTEXT>
+     <OCLSS>MM_G</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>MGA</DEVCLASS>
+     <PS_POSID>LO-MD-MM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>M_MATE_MAT</OBJECT>
+     <TTEXT>Material Master: Materials</TTEXT>
+     <OCLSS>MM_G</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>MGA</DEVCLASS>
+     <PS_POSID>LO-MD-MM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>M_MATE_NEU</OBJECT>
+     <TTEXT>Material Master: Create</TTEXT>
+     <OCLSS>MM_G</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>MGA</DEVCLASS>
+     <PS_POSID>LO-MD-MM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>M_MATE_STA</OBJECT>
+     <TTEXT>Material Master: Maintenance Statuses</TTEXT>
+     <OCLSS>MM_G</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>MG</DEVCLASS>
+     <PS_POSID>LO-MD-MM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>M_MATE_VKO</OBJECT>
+     <TTEXT>Material Master: Sales Organization/Distribution Channel</TTEXT>
+     <OCLSS>MM_G</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>MG</DEVCLASS>
+     <PS_POSID>LO-MD-MM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>M_MATE_WGR</OBJECT>
+     <TTEXT>Material Master: Material Groups</TTEXT>
+     <OCLSS>MM_G</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>MGA</DEVCLASS>
+     <PS_POSID>LO-MD-MM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>M_MATE_WRK</OBJECT>
+     <TTEXT>Material Master: Plants</TTEXT>
+     <OCLSS>MM_G</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>MG</DEVCLASS>
+     <PS_POSID>LO-MD-MM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>Q_MATERIAL</OBJECT>
+     <TTEXT>Material Authorization</TTEXT>
+     <OCLSS>QA</OCLSS>
+     <OKFLAG>V</OKFLAG>
+     <DEVCLASS>QM00</DEVCLASS>
+     <PS_POSID>QM</PS_POSID>
+     <CI_TEXT>Check/Without V</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes, Without Values</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+    <item>
+     <OBJECT>S_START</OBJECT>
+     <TTEXT>Start Authorization Check for TADIR Objects</TTEXT>
+     <OCLSS>AAAB</OCLSS>
+     <OKFLAG>X</OKFLAG>
+     <DEVCLASS>S_PROFGEN_START_AUTH</DEVCLASS>
+     <PS_POSID>BC-SEC-AUT-CHK</PS_POSID>
+     <CI_TEXT>Check</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>No</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
+   </USOBX_EXT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

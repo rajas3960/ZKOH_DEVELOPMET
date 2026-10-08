@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "GSTR2"
+  },
+  "ui5AppDetails": {
+    "appId": "gstr2kailash"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6FB233A1563C31DEB2C79695EF86BB4CDF4A3D87_TM",
+    "semanticObject": "ZGSTR2_OBJ",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6FB233A1563C31DEB2C79695EF86BB4CDF4A3D87_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GSTR2",
+        "subtitle": "Purchase Report New"
+      }
+    }
+  ]
+}

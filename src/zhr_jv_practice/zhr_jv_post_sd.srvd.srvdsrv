@@ -1,0 +1,5 @@
+@EndUserText.label: 'service definition for Parent'
+define service ZHR_JV_POST_SD {
+  expose ZHR_JV_POST_PV  as Header;
+  expose ZHR_JV_POST1_PV as Item;
+}

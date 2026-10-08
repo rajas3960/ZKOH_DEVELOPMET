@@ -1,0 +1,54 @@
+@Metadata.layer: #PARTNER
+annotate entity ZMM_MRP_IPV2
+    with 
+{
+ @UI.facet: [{ id: 'pritm',
+          purpose: #STANDARD,
+          type: #IDENTIFICATION_REFERENCE,
+          label: 'PR Data', position: 10     } ]
+  @UI.hidden: true
+  Recguid;
+  @UI: { lineItem: [{ position: 1, label: 'Doc. Type' }],
+  identification: [{ position: 1, label: 'Doc. Type' }]}
+  Doctyp;
+  @UI: { lineItem: [{ position: 5, label: 'Document No.' }],
+  identification: [{ position: 5, label: 'Document No.' }]}
+  Prnum;
+/*  @UI: { lineItem: [{ position: 10, label: 'Line Item' }],
+  identification: [{ position: 10, label: 'Line Item' }]}
+  Pritm;
+  @UI: { lineItem: [{ position: 20, label: 'Plant' }],
+  identification: [{ position: 20, label: 'Plant' }]}
+  Plant;
+  @UI: { lineItem: [{ position: 30, label: 'Material' }],
+  identification: [{ position: 30, label: 'Material' }]}
+  @Search.defaultSearchElement: true
+  Material;
+  @UI: { lineItem: [{ position: 40, label: 'Material Desc.' }],
+  identification: [{ position: 40, label: 'Material Desc.' }]}
+  @Search.defaultSearchElement: true
+  Matdesc;
+  @UI: { lineItem: [{ position: 50, label: 'Req. Qty' }],
+  identification: [{ position: 50, label: 'Req. Qty' }]}
+  Reqqty;
+  //  @UI: { lineItem: [{ position: 60, label: 'Qty Unit' }],
+  //  identification: [{ position: 60, label: 'Qty Unit' }]}
+  @UI.hidden: true
+  Uom;
+  @UI: { lineItem: [{ position: 60, label: 'Supp. Plant' }],
+  identification: [{ position: 60, label: 'Supp. Plant' }]}
+  Supplnt;
+  @UI: { lineItem: [{ position: 70, label: 'Delv. Date' }],
+  identification: [{ position: 70, label: 'Delv. Date' }]}
+  Delvdat;
+  @UI: { lineItem: [{ position: 65, label: 'Stor. Loc' }],
+  identification: [{ position: 65, label: 'Stor. Loc' }]}
+  Sloc;
+  @UI: { lineItem: [{ position: 75, label: 'Issuing SLoc' }],
+  identification: [{ position: 75, label: 'Issuing SLoc' }]}
+  Issloc; */
+  /* Associations */
+  @UI.hidden: true
+  _header;
+    
+}

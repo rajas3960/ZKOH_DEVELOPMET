@@ -1,0 +1,33 @@
+managed implementation in class zbp_taxcode_pv unique;
+strict ( 2 );
+with draft;
+define behavior for Ztaxcode_PV alias HDR
+persistent table ztaxcodetb
+draft table ztaxcodetb1
+lock master total etag Taxcode
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly : update ) Cntyregkey, Contype, Taxcode, Zprocedure, taxtype;
+  create;
+  update;
+  delete;
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  mapping for ztaxcodetb control ztaxcode_cx1
+    {
+      Cntyregkey = cntyregkey;
+      Contype    = contype;
+      Taxate     = taxate;
+      Taxcode    = taxcode;
+      Zprocedure = zprocedure;
+      taxtype    = taxtype;
+      grmrp      = grmrp;
+
+
+
+    }
+}

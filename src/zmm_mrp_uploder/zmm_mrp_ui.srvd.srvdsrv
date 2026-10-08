@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service UI Mass PR Uploader'
+define service ZMM_MRP_UI {
+  expose ZMM_MRP_RPV  as MainPage;
+  expose ZMM_MRP_IPV1 as LineItem;
+  expose ZMM_MRP_IPV2 as PrLineItm;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defenation Plant Desc'
+define service ZSTORAGELOC_SD {
+  expose ZSTORAGELOC_PROJECTION as StorageLoactionDetails;
+}

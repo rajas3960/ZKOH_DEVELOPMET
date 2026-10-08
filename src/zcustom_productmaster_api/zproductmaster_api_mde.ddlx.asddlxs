@@ -1,0 +1,39 @@
+@Metadata.layer: #PARTNER
+@UI: {
+  headerInfo: { typeName: 'Product Master',
+                typeNamePlural: 'Product Master',
+                title: { type: #STANDARD, label: 'Product Master', value: 'ProductNo' } },
+  presentationVariant: [{ sortOrder: [{ by: 'ProductNo', direction:  #DESC }] }] }
+annotate view ZPRODIUCTMASTER_API_PV with
+{
+  @UI.facet: [ {  id:              'Product Master',
+                      purpose:         #STANDARD,
+                      type:            #IDENTIFICATION_REFERENCE,
+                      label:           'Product Master',
+                      position:        10 },
+                    { id:              'ProductNo',
+                      purpose:         #STANDARD,
+                      type:            #LINEITEM_REFERENCE,
+                      label:           'ProductNo',
+                      position:        10,
+                      targetElement:   'ProductNo'} ]
+
+  @UI: {  lineItem:       [ { position: 10, label: 'ProductNo' } ],
+          identification:   [ { position: 10, label: 'ProductNo' } ],
+          selectionField:   [ { position: 10}  ]}
+  @EndUserText.label: 'ProductNo'
+  ProductNo;
+
+  @UI: {  lineItem:       [ { position: 40, label: 'ProductDesc' } ],
+          identification:   [ { position: 40, label: 'ProductDesc' } ] }
+  ProductDesc;
+
+  @UI: {  lineItem:       [ { position: 40, label: 'Plant' } ],
+          identification:   [ { position: 40, label: 'Plant' } ] }
+  Plant;
+
+  @UI: {  lineItem:       [ { position: 40, label: 'Latest_Date' } ],
+          identification:   [ { position: 40, label: 'Latest_Date' } ] }
+  Latest_Date;
+
+}

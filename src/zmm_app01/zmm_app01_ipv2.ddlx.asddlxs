@@ -1,0 +1,38 @@
+@Metadata.layer: #CUSTOMER
+@UI: { headerInfo: {
+typeName: 'Change Log item',
+typeNamePlural: 'Change Log item',
+title: { type: #STANDARD, value: 'Suid' } } }
+annotate entity ZMM_APP01_IPV2
+    with 
+{
+    @UI.facet: [ { id:              'Changelogitem',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'Change Log Item',
+                   position:        10 } ]
+    @UI.hidden: true
+Suid;
+@UI.lineItem: [{ position: 10,label: 'Material ' }]
+@UI.identification: [{ position: 10,label: 'Material ' }]
+Material;
+@UI.lineItem: [{ position: 20,label: 'HSN Code' }]
+@UI.identification: [{ position: 20,label: 'HSN Code' }]
+Hsn;
+@UI.lineItem: [{ position: 30,label: 'Tax Rate' }]
+@UI.identification: [{ position: 30,label: 'Tax Rate' }]
+Tax;
+@UI.lineItem: [{ position: 40,label: 'LastChanged On' }]
+@UI.identification: [{ position: 40,label: 'LastChanged On' }]
+Createdon;
+@UI.lineItem: [{ position: 50,label: 'LastChanged By' }]
+@UI.identification: [{ position: 50,label: 'LastChanged By' }]
+Createdby;
+@UI.lineItem: [{ position: 80,label: 'LastChanged time' }]
+@UI.identification: [{ position:80,label: 'LastChanged time' }]
+changetime;
+@UI.hidden: true
+    /* Associations */
+    _hdr;
+    
+}

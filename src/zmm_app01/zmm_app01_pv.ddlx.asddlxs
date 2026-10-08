@@ -1,0 +1,72 @@
+@Metadata.layer: #CUSTOMER
+@UI: { headerInfo: {
+typeName: 'HSN Upload Excel App',
+typeNamePlural: 'HSN Upload Excel App',
+title: { type: #STANDARD, value: 'Suid' },
+         description: { type: #STANDARD, value: 'Status' }  } }
+annotate entity ZMM_APP01_PV with
+{
+  @UI.facet: [  {
+                        id:  'Header',
+                        purpose:         #STANDARD,
+                        type:            #IDENTIFICATION_REFERENCE,
+                        label:           'Attachment',
+                        position:        10
+                        },
+                         {
+                        id:              'Items',
+                        purpose:         #STANDARD,
+                        type:            #LINEITEM_REFERENCE,
+                        label:           ' Items',
+                        position:        20,
+                        targetElement:   '_ITEM'
+                        } ,
+                                    {
+                            id: 'Hcreatedby',
+                            purpose: #HEADER,
+                            type: #DATAPOINT_REFERENCE,
+                            position: 10,
+                            targetQualifier: 'crtdby'
+                         },
+                          {
+                            id: 'Createdon',
+                            purpose: #HEADER,
+                            type: #DATAPOINT_REFERENCE,
+                            position: 10,
+                            targetQualifier: 'crtdon'
+                         },
+                          {
+                            id: 'Filup',
+                            purpose: #HEADER,
+                            type: #DATAPOINT_REFERENCE,
+                            position: 10,
+                            targetQualifier: 'fileupd'
+                         }
+
+                        ]
+  @UI.hidden: true
+
+  Suid;
+  //@UI.lineItem: [{ position: 50,label: 'Attachment'  }]
+  @UI.identification: [{ position: 10,label: 'Attachment',importance: #HIGH },{ type: #FOR_ACTION, dataAction: 'loadexcl' , label: 'Excel Upload'  ,position: 10 }]
+  Attachment;
+  @UI.hidden: true
+  Minetype;
+  @UI.hidden: true
+  Filename;
+  @UI.lineItem: [{ position: 10,label: 'Status'  }]
+  @UI.dataPoint: { qualifier: 'fileupd', title: 'Status'}
+  Status;  
+  @UI.lineItem: [{ position: 15,label: 'Delection Mark'  }]
+  @UI.dataPoint: { qualifier: 'Delet', title: 'Delection Mark'}
+  Deletion;
+  @UI.lineItem: [{ position: 20,label: 'Created By'  }]
+  @UI.dataPoint: { qualifier: 'crtdby', title: 'Created By'}
+  Createdby;
+  @UI.lineItem: [{ position: 30,label: 'Created On'  }]
+  @UI.dataPoint: { qualifier: 'crtdon', title: 'Created On'}
+  Createdon;
+  /* Associations */
+  @UI.hidden: true
+  _ITEM;
+}

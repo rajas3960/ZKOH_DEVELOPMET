@@ -1,0 +1,51 @@
+@Metadata.layer: #PARTNER
+annotate entity ZI_JENTRY_RPV with
+{
+
+  @UI.facet: [{
+              id: 'idinfo', type: #COLLECTION,
+              label: 'General Information',
+              position: 10 },
+              {
+              id: 'iddrsbatch',
+              type: #IDENTIFICATION_REFERENCE,
+              position: 10,
+              parentId: 'idinfo' } ]
+  @UI.lineItem: [{ position: 10, label: 'CompanyCode'},
+  { type: #FOR_ACTION, dataAction: 'Post', label: 'Post' }]
+  @UI.identification: [{ position: 10, label: ''}  ]
+  CompanyCode;
+  @UI.lineItem: [{ position: 10, label: 'FiscalYear'}]
+  @UI.identification: [{ position: 10, label: ''} ]
+  FiscalYear;
+  @UI.lineItem: [{ position: 10, label: 'AccountingDocument'}]
+  @UI.identification: [{ position: 10, label: ''}]
+  AccountingDocument;
+  @UI.lineItem: [{ position: 10, label: 'AccountingDocumentType'}]
+  @UI.identification: [{ position: 10, label: ''}]
+  AccountingDocumentType;
+  @UI.hidden: true
+  DocumentDate;
+  @UI.hidden: true
+  PostingDate;
+  @UI.hidden: true
+  AccountingDocCreatedByUser;
+  @UI.hidden: true
+  DocumentReferenceID;
+  @UI.hidden: true
+  AccountingDocumentHeaderText;
+  @UI.hidden: true
+  BusinessTransactionType;
+  @UI.hidden: true
+  amnt;
+  @UI.hidden: true
+  glacct;
+  @UI.hidden: true
+  lineitm;
+  @UI.hidden: true
+  curr;
+  /* Associations */
+  @UI.hidden: true
+  _item;
+
+}

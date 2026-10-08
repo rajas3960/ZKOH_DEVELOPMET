@@ -1,0 +1,92 @@
+
+@Metadata.layer: #PARTNER
+
+@EndUserText.label: 'HR JV POSTING'
+@UI:{
+headerInfo: { typeName: 'HR JV POSTING',
+              typeNamePlural: 'HR JV POSTING',
+            title: { type: #STANDARD, label: 'HR JV POSTING' } }
+}
+annotate entity ZHR_JV_POST_PV
+    with 
+{
+  
+@UI.facet: [ { id:              'Header',
+                        purpose:         #STANDARD,
+                        type:            #IDENTIFICATION_REFERENCE,
+                        label:           'HR JV POSTING',
+                        position:        10 } ,
+                      { id:              'Items',
+                        purpose:         #STANDARD,
+                        type:            #LINEITEM_REFERENCE,
+                        label:           'company',
+                        position:        20,
+                        targetElement:   '_Item'}]
+//    element_name;
+@UI.hidden: true
+Uuid;
+@UI: { lineItem: [{ position: 160, label: 'Month' }],
+identification: [{ position: 160,label: 'Month' }]}
+Zmonth;
+@UI: { lineItem: [{ position: 170, label: 'Years' }],
+identification: [{ position: 170,label: 'Years' }]}
+Zyears;
+@UI: { lineItem: [{ position: 10, label: 'Jv Name' }],
+identification: [{ position: 10,label: 'Jv Name' }]}
+JvName;
+@UI: { lineItem: [{ position: 20, label: 'Company Code' }],
+identification: [{ position: 20,label: 'Company Code' }]}
+Companycode;
+@UI: { lineItem: [{ position: 30, label: 'Designation Name' }],
+identification: [{ position: 30,label: 'Designation Name' }]}
+    Designationname;
+    @UI: { lineItem: [{ position: 40, label: 'Grade Name' }],
+identification: [{ position: 40,label: 'Grade Name' }]}
+    Gradename;
+    @UI: { lineItem: [{ position: 60, label: 'Department Name' }],
+identification: [{ position: 60,label: 'Department Name' }]}
+   Departmentname;
+    @UI: { lineItem: [{ position: 70, label: 'Subdepartment Name' }],
+identification: [{ position: 70,label: 'Subdepartment Name' }]}
+    Subdepartmentname;
+    @UI: { lineItem: [{ position: 80, label: 'Level Name' }],
+identification: [{ position: 80,label: 'Level Name' }]}
+    Levelname;
+    @UI: { lineItem: [{ position: 90, label: 'Region Name' }],
+identification: [{ position: 90,label: 'Region Name' }]}
+    Regionname;
+    @UI: { lineItem: [{ position: 100, label: 'Branch Name' }],
+identification: [{ position: 100,label: 'Branch Name' }]}
+    Branchname;
+    @UI: { lineItem: [{ position: 110, label: 'Subbranch Name' }],
+identification: [{ position: 110,label: 'Subbranch Name' }]}
+    Subbranchname;
+    @UI: { lineItem: [{ position: 120, label: 'Employeetype Name' }],
+identification: [{ position: 120,label: 'Employeetype Name' }]}
+   Employeetypename;
+    @UI: { lineItem: [{ position: 130, label: 'Employeestatus Name' }],
+identification: [{ position: 130,label: 'Employeestatus name' }]}
+     Employeestatusname;
+    @UI: { lineItem: [{ position: 140, label: ' Businessunit Name' }],
+identification: [{ position: 140,label: ' Businessunit Name' }]}
+    Businessunitname;
+    @UI: { lineItem: [{ position: 150, label: 'Employee otherstatus Name' }],
+identification: [{ position: 150,label: 'Employee otherstatus Name' }]}
+     Employeeotherstatusname;
+    @UI: { lineItem: [{ position: 50, label: 'Format Type' }],
+identification: [{ position: 50,label: 'Format Type' }]}
+  Formattype;
+    
+    @UI.hidden: true
+    Lastchangedby;
+   
+    @UI.hidden: true
+    Lastchangedat;
+    
+    @UI.hidden: true
+    Locallastchanged;
+     @UI.hidden: true
+    /* Associations */
+    
+    _Item;
+}

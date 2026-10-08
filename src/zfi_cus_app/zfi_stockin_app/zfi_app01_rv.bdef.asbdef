@@ -1,0 +1,40 @@
+managed implementation in class zbp_fi_app01_rv unique;
+strict ( 2 );
+
+define behavior for ZFI_APP01_RV //alias <alias_name>
+persistent table zfi_app01_tb1
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Uuid;
+  association _Item { create; }
+  association _Work { create; }
+}
+
+define behavior for ZFI_APP01_CV //alias <alias_name>
+persistent table zfi_app01_tb2
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Uuid, Transposno, Itemno;
+  association _Header;
+}
+
+define behavior for ZFI_APP01_SCV //alias <alias_name>
+persistent table zfi_app01_tb3
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Uuid, Poorder, Poitem;
+  association _Header;
+}

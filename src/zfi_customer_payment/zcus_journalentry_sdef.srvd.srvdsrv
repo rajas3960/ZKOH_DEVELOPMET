@@ -1,0 +1,4 @@
+@EndUserText.label: 'Customer payment API'
+define service ZCUS_JOURNALENTRY_SDEF {
+  expose ZCUS_JOURNALENTRY;
+}

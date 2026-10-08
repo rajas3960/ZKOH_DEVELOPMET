@@ -1,0 +1,110 @@
+@Metadata.layer: #CUSTOMER
+@UI: { headerInfo: {
+typeName: 'PR Upload App',
+typeNamePlural: 'PR Upload App',
+title: { type: #STANDARD, value: 'Recguid' },
+         description: { type: #STANDARD, value: 'Status' }  } }
+annotate entity ZMM_MRP_RPV with
+{
+  @UI.facet: [{
+
+
+           id:  'Header',
+                      purpose:         #STANDARD,
+                      type:            #IDENTIFICATION_REFERENCE,
+                      label:           'Attachment',
+  //                      parentId: 'Headerinfo',
+                      position:        10
+                      },
+             {
+               id: 'Items',
+               purpose: #STANDARD,
+               type: #LINEITEM_REFERENCE,
+               label: 'Line Items',
+               position: 30,
+               targetElement: '_Items' },
+               {
+               id: 'pritm',
+               purpose: #STANDARD,
+               type: #LINEITEM_REFERENCE,
+               label: 'PR Details',
+               position: 40,
+               targetElement: '_Pritm' } ,
+                {
+                          id: 'Hcreatedby',
+                          purpose: #HEADER,
+                          type: #DATAPOINT_REFERENCE,
+                          position: 10,
+                          targetQualifier: 'crtdby'
+                       },
+                        {
+                          id: 'Createdon',
+                          purpose: #HEADER,
+                          type: #DATAPOINT_REFERENCE,
+                          position: 10,
+                          targetQualifier: 'crtdon'
+                       },
+                        {
+                          id: 'Filup',
+                          purpose: #HEADER,
+                          type: #DATAPOINT_REFERENCE,
+                          position: 10,
+                          targetQualifier: 'fileupd'
+                       }
+                  ]
+
+  @UI.hidden: true
+  Recguid;
+  @UI.lineItem: [{ position: 30, label: 'Doc. Type' } ]
+  @UI.identification: [{ position: 30, label: 'Doc. Type' } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_PRDOCTYP_VH', element: 'prtype' },
+  additionalBinding: [{  element: 'name', localElement: 'Dtyptxt' }] }]
+  Doctype;
+  @UI.identification: [{ position: 10,label: 'Attachment',importance: #HIGH },{ type: #FOR_ACTION, dataAction: 'loadexcel' , label: 'Load Excel'  ,position: 10 }]
+  Attachment;
+  @UI.hidden: true
+  Filename;
+
+  @UI.hidden: true
+  Srcdtm;
+  @UI.hidden: true
+  Dtyptxt;
+  @UI.lineItem: [{ position: 20, label: 'File PR Records' } ]
+  Totprrec;
+  @UI.lineItem: [{ position: 30, label: 'PR Created' } ]
+  Totprcrt;
+  @UI.hidden: true
+  Itmcid;
+  @UI.hidden: true
+  Actcid;
+  //  @UI.lineItem: [{ position: 40, label: 'File STO Records' } ]
+  //  Totporec;
+  //  @UI.lineItem: [{ position: 50, label: 'STO Created' } ]
+  //  Totpocrt;
+  @UI.lineItem: [{ position: 20, label: 'Created On' } ]
+  @UI.identification: [{ position: 20, label: 'Created On' } ]
+  @Search.defaultSearchElement: true
+  Createdat;
+  @UI.lineItem: [{ position: 70, label: 'Changed By' } ]
+
+  Lastchangedby;
+  @UI.lineItem: [{ position: 60, label: 'Changed On' } ]
+  Lastchangedat;
+  @UI.lineItem: [{ position: 10, label: 'Created By' } ]
+  @UI.identification: [{ position: 10, label: 'Created By' },
+  { type: #FOR_ACTION, dataAction: 'CrtPr', label: 'Create PR' }]
+//  { type: #FOR_ACTION, dataAction: 'CrtPo', label: 'Create STO' },
+//  { type: #FOR_ACTION, dataAction: 'UpdPr', label: 'Update PR PDT' } ]
+  @UI.dataPoint: { qualifier: 'crtdby', title: 'Created By'}
+  Createdby;
+  @UI.hidden: true
+  Status;
+  @UI.dataPoint: { qualifier: 'fileupd', title: 'File Status'}
+  Decs;
+  /* Associations */
+  @UI.hidden: true
+  _Items;
+  @UI.hidden: true
+  _Pritm;
+
+}

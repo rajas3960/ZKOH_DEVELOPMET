@@ -1,0 +1,97 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZFI_APP1_CPIV
+    with 
+{
+  @UI.facet: [ { id:              'Item',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'Standard Items',
+                   position:        10 } ]
+  @UI.hidden: true
+Uuid;
+  @UI: { lineItem: [{ position: 10, label: 'S.No' }],
+  identification: [{ position: 10, label: 'S.No'  }] }
+  @EndUserText.label: 'Item No'
+Itemno;
+  @UI: { lineItem: [{ position: 20, label: 'Asset Code' }],
+  identification: [{ position: 20, label: 'Asset Code'  }] }
+  @EndUserText.label: 'Asset Code'
+  
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZFI_ASSETJOURNAL_VH1', element: 'MasterFixedAsset' },
+                    additionalBinding: [{ localElement: 'Qty', element: 'Qty', usage: #RESULT },
+                                        { localElement: 'Uom', element: 'Uom', usage: #RESULT },
+                                        { localElement: 'Assetmatdes', element: 'Assetmatdes', usage: #RESULT },
+                                        { localElement: 'Fromplant', element: 'Fromplant', usage: #RESULT },
+                                        { localElement: 'Fromlocation', element: 'Fromlocation', usage: #RESULT },
+                                        { localElement: 'Toplant', element: 'Toplant', usage: #RESULT },
+                                        { localElement: 'Tolocation', element: 'Tolocation', usage: #RESULT },
+                                        { localElement: 'Inventoryno', element: 'Inventoryno', usage: #RESULT } ] }]
+Transposno;
+  @UI: { lineItem: [{ position: 30, label: 'Asset Description' }],
+  identification: [{ position: 30, label: 'Asset Description'  }] }
+  @EndUserText.label: 'Asset Description'
+Assetmatdes;
+  @UI: { lineItem: [{ position: 40, label: 'Quantity' }],
+  identification: [{ position: 40, label: 'Quantity'  }] }
+  @EndUserText.label: 'Quantity'
+Qty;
+  @UI: { lineItem: [{ position: 50, label: 'UOM' }],
+  identification: [{ position: 50, label: 'UOM'  }] }
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'I_UnitOfMeasureStdVH',
+                                                   element: 'UnitOfMeasure' } }]  
+  @EndUserText.label: 'Base Unit'
+Uom;
+  @UI: { lineItem: [{ position: 60, label: 'Make/Model No' }],
+  identification: [{ position: 60, label: 'Make/Model No'  }] }
+//  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ProductDescription_2', element: 'Product'  } }]
+  @EndUserText.label: 'Make/Model No'
+Batch;
+  @UI: { lineItem: [{ position: 70, label: 'From Plant' }],
+  identification: [{ position: 70, label: 'From Plant'  }] }
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PlantStdVH', element: 'Plant' } }]
+  @EndUserText.label: 'From Plant'
+Fromplant;
+  @UI: { lineItem: [{ position: 80, label: 'From Location' }],
+  identification: [{ position: 80, label: 'From Location'  }] }
+        @Consumption.valueHelpDefinition: [{ entity: { name: 'I_StorageLocationStdVH',
+                                                   element: 'StorageLocation' } }]  
+  @EndUserText.label: 'From Location'
+Fromlocation;
+  @UI: { lineItem: [{ position: 90, label: 'To Plant' }],
+  identification: [{ position: 90, label: 'To Plant'  }] }
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PlantStdVH', element: 'Plant' } }]  
+  @EndUserText.label: 'To Plant'
+Toplant;
+  @UI: { lineItem: [{ position: 100, label: 'To Location' }],
+  identification: [{ position: 100, label: 'To Location'  }] }
+         @Consumption.valueHelpDefinition: [{ entity: { name: 'I_StorageLocationStdVH',
+                                                   element: 'StorageLocation' } }]   
+  @EndUserText.label: 'To Location'
+Tolocation;
+  @UI: { lineItem: [{ position: 110, label: 'Inventory No' }],
+  identification: [{ position: 110, label: 'Inventory No'  }] }
+         @Consumption.valueHelpDefinition: [{ entity: { name: 'ZFI_ASSETJOURNAL_VH1',
+                                                   element: 'Inventoryno' } }]   
+  @EndUserText.label: 'Inventory No'
+Inventoryno;
+  @UI: { lineItem: [{ position: 120, label: 'Serial No' }],
+  identification: [{ position: 120, label: 'Serial No'  }] }
+  @EndUserText.label: 'Serial No'
+Serialnumber;
+@UI.hidden: true
+recivedqty;
+@UI.hidden: true
+Assetmat;
+@UI.hidden: true
+Createdby;
+@UI.hidden: true
+Createdat;
+@UI.hidden: true
+Lastchangedby;
+@UI.hidden: true
+Lastchangedat;
+@UI.hidden: true
+/* Associations */
+_Header;
+    
+}

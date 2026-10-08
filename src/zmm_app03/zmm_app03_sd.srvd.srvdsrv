@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Denifnation For hsn'
+define service ZMM_APP03_SD {
+  expose ZMM_APP03_PV  as Mainpage;
+  expose ZMM_APP03_d;
+  expose ZMM_APP03_IPV;
+}

@@ -1,0 +1,64 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZFI_APP2_SWPV
+    with 
+{
+  @UI.facet: [ { id:              'Item',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'Standard Items',
+                   position:        10 } ]
+  @UI.hidden: true
+Uuid;
+  @UI: { lineItem: [{ position: 10, label: 'Purchase Order' }],
+  identification: [{ position: 10, label: 'Purchase Order'  }] }
+  @EndUserText.label: 'Purchase Order'
+Poorder;
+  @UI: { lineItem: [{ position: 20, label: 'Purchase Order Item' }],
+  identification: [{ position: 20, label: 'Purchase Order Item'  }] }
+  @EndUserText.label: 'Purchase Order Item'
+Poitem;
+  @UI: { lineItem: [{ position: 30, label: 'Product' }],
+  identification: [{ position: 30, label: 'Product'  }] }
+  @EndUserText.label: 'Product'
+Materialnumber;
+  @UI: { lineItem: [{ position: 40, label: 'Product Des' }],
+  identification: [{ position: 40, label: 'Product Des'  }] }
+  @EndUserText.label: 'Product Des'
+Productdes;
+  @UI: { lineItem: [{ position: 50, label: 'Quantity' }],
+  identification: [{ position: 50, label: 'Quantity'  }] }
+  @EndUserText.label: 'Quantity'
+Poqty;
+  @UI: { lineItem: [{ position: 60, label: 'UOM' }],
+  identification: [{ position: 60, label: 'UOM'  }] }
+  @EndUserText.label: 'UOM'
+Pounit;
+  @UI: { lineItem: [{ position: 70, label: 'Purchase Cost' }],
+  identification: [{ position: 70, label: 'Purchase Cost'  }] }
+  @EndUserText.label: 'Purchase Cost'
+Pocost;
+  @UI: { lineItem: [{ position: 80, label: 'Document Currency' }],
+  identification: [{ position: 80, label: 'Document Currency'  }] }
+  @EndUserText.label: 'Document Currency'
+Documcurrency;
+    @UI: { lineItem: [{ position: 90, label: 'Rec qty' }],
+    identification: [{ position: 90, label: 'Rec qty'  }] }
+    @EndUserText.label: 'Rec qty'
+Recqty;
+    @UI: { lineItem: [{ position: 100, label: 'Pen qty' }],
+    identification: [{ position: 100, label: 'Pen qty'  }] }
+    @EndUserText.label: 'Pen qty'
+Penqty;
+  @UI.hidden: true
+Createdby;
+  @UI.hidden: true
+Createdat;
+  @UI.hidden: true
+Lastchangedby;
+  @UI.hidden: true
+Lastchangedat;
+  @UI.hidden: true
+/* Associations */
+_Header;
+    
+}

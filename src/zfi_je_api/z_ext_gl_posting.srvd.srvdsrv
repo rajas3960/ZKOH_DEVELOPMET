@@ -1,0 +1,5 @@
+@EndUserText.label: 'Manage_GL_Posting'
+define service Z_EXT_GL_POSTING {
+  expose ZC_GeneralJournalEntry;
+  expose ZC_GeneralJournalEntryItem;
+}

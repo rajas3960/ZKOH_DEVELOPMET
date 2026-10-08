@@ -1,0 +1,4 @@
+@EndUserText.label: 'Data Defination For PPlant'
+define service ZProduct_plt {
+  expose ZPro_Mas_Plant_filter;
+}

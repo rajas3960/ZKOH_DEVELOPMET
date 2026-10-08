@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination For Taxcode'
+define service ZSD_Taxcode {
+  expose Ztaxcode_RPV as Mainpage;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination For Payment Voucher'
+define service ZFI_PV_SD {
+  expose ZFI_PV_PV as MAINPAGE;
+}

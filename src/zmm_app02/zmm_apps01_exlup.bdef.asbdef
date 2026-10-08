@@ -1,0 +1,6 @@
+abstract;
+strict ( 2 );
+with hierarchy;
+define behavior for ZMM_APPS01_EXLUP //alias <alias_name>
+{
+}

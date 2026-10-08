@@ -1,0 +1,66 @@
+managed implementation in class zbp_mm_app01_rv unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZMM_APP01_rv alias _hdr
+//persistent table zmm_app01_tb1
+with unmanaged save
+draft table zmm_app01_dt1
+lock master total etag Createdon
+etag master Createdon
+
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global);
+  update;
+  delete;
+  action ( features : instance ) loadexcl result [1] $self;
+  side effects { action loadexcl affects entity _ITEM; }
+  determination gtdata on save { create; update; }
+//  determination set_status on save { create; update; }
+
+  draft action Edit;
+  draft action Resume;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+  field ( readonly, numbering : managed ) Suid;
+  field ( readonly ) status;
+  association _ITEM { create; with draft; }
+  mapping for zmm_app01_tb1 corresponding ;
+}
+
+define behavior for ZMM_APP01_IRV alias _item
+//persistent table zmm_app01_itb1
+with unmanaged save
+draft table zmm_app01_idt1
+lock dependent by _HDR
+authorization dependent by _HDR
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly : update ) Matnr;
+  field ( readonly ) SuiD,Status,Lastchngat,Lastchngby,createdby,createdon,changetime;
+  association _HDR { with draft; }
+  association _ITEM1 {create; with draft;}
+  determination gtdata on save { create; update;}
+    mapping for zmm_app01_itb1 corresponding ;
+}
+define behavior for ZMM_APP01_IRV2 alias Item2
+with unmanaged save
+draft table zmm_app01_idt2
+lock dependent by _hdr
+authorization dependent by _hdr
+{
+  update;
+  delete;
+
+  field ( readonly ) Material;
+  field ( readonly ) Suid ,Slno,Createdby,Createdon,Hsn,Tax,changetime;
+
+  association _item2  { with draft; }
+  association _hdr{with draft;}
+  mapping for zmm_app01_itb2 corresponding;
+}

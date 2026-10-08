@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "RGB/NRGB - Gate Entry & Out",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "RGB/NRGB - Gate Security"
+  },
+  "ui5AppDetails": {
+    "appId": "zrgbnrgbgateinout.zfirgbnrgbgateinout"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_EBB7750BBBBFDA95989DDB06C73146A87CDB46CF_TM",
+    "semanticObject": "zfi_rgbnrgb_gateinout",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_EBB7750BBBBFDA95989DDB06C73146A87CDB46CF_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "RGB/NRGB - Gate Security",
+        "subtitle": "RGB/NRGB - Gate Entry & Out Process"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+@Metadata.layer: #CUSTOMER
+@UI: { headerInfo: {
+typeName: 'Custom HSN Uploder Application',
+typeNamePlural: 'Custom HSN Upload Application',
+title: { type: #STANDARD, value: 'Matnr' },
+         description: { type: #STANDARD, value: 'Status' }  } }
+annotate entity ZMM_APP03_PV
+    with 
+{
+  @UI.facet: [  {
+                        id:  'Header',
+                        purpose:         #STANDARD,
+                        type:            #IDENTIFICATION_REFERENCE,
+                        label:           'Header Details',
+                        position:        10
+                        }
+                        ,
+                         {
+                        id:              'Itemsfg',
+                        purpose:         #STANDARD,
+                        type:            #LINEITEM_REFERENCE,
+                        label:           'Change log Items',
+                        position:        20,
+                        targetElement:   '_item'
+                        }
+                        ]
+@UI.lineItem: [{ position: 10,label: 'Material ' },{ type: #FOR_ACTION , dataAction: 'upexl',label: 'Excel Upload',position: 10 }]
+@UI.identification: [{ position: 10,label: 'Material ' }]
+Matnr;
+@UI.lineItem: [{ position: 20,label: 'HSN Code' }]
+@UI.identification: [{ position: 20,label: 'HSN Code' }]
+Hsn;
+@UI.lineItem: [{ position: 30,label: 'Tax Rate' }]
+@UI.identification: [{ position: 30,label: 'Tax Rate' }]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZMM_APP03_d',element: 'name' } }]
+Tax;
+@UI.lineItem: [{ position: 40,label: 'Created By' }]
+@UI.identification: [{ position: 40,label: 'Created By' }]
+Createdby;
+@UI.lineItem: [{ position: 50,label: 'Created On' }]
+@UI.identification: [{ position: 50,label: 'Created On' }]
+Createdon;
+@UI.lineItem: [{ position: 60,label: 'Last Changed By' }]
+@UI.identification: [{ position: 60,label: 'Last Changed By' }]
+Lastchngby;
+@UI.lineItem: [{ position: 70,label: 'Last Changed On' }]
+@UI.identification: [{ position: 70,label: 'Last Changed On' }]
+Lastchngat;
+@UI.lineItem: [{ position: 80,label: 'Deletion Mark' }]
+@UI.identification: [{ position:80,label: 'Deletion Mark' }]
+Status;
+//@UI.hidden: true
+///* Associations */
+//_ITEM;
+    
+}

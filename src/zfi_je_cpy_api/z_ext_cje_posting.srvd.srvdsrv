@@ -1,0 +1,4 @@
+@EndUserText.label: 'JE Customer Payment API'
+define service Z_EXT_CJE_POSTING {
+  expose ZPE_GeneralJournalEntry;
+}

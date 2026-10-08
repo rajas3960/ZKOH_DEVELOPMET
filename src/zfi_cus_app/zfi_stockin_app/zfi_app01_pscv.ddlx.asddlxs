@@ -1,0 +1,40 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZFI_APP01_PSCV
+    with 
+{
+  @UI.facet: [ { id:              'Item',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'Standard Items',
+                   position:        10 } ]
+  @UI.hidden: true
+Uuid;
+  @UI: { lineItem: [{ position: 10, label: 'Purchase Order' }],
+  identification: [{ position: 10, label: 'Purchase Order'  }] }
+  @EndUserText.label: 'Purchase Order'
+Poorder;
+  @UI: { lineItem: [{ position: 20, label: 'Purchase Order Item' }],
+  identification: [{ position: 20, label: 'Purchase Order Item'  }] }
+  @EndUserText.label: 'Purchase Order Item'
+Poitem;
+  @UI: { lineItem: [{ position: 30, label: 'Product' }],
+  identification: [{ position: 30, label: 'Product'  }] }
+  @EndUserText.label: 'Product'
+Materialnumber;
+  @UI: { lineItem: [{ position: 40, label: 'Product Des' }],
+  identification: [{ position: 40, label: 'Product Des'  }] }
+  @EndUserText.label: 'Product Des'
+Productdes;
+  @UI.hidden: true
+Createdby;
+  @UI.hidden: true
+Createdat;
+  @UI.hidden: true
+Lastchangedby;
+  @UI.hidden: true
+Lastchangedat;
+/* Associations */
+  @UI.hidden: true
+_Header;
+    
+}

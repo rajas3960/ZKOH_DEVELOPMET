@@ -1,0 +1,51 @@
+@Metadata.layer: #PARTNER
+@UI: { headerInfo: {
+typeName: 'HSN Master App',
+typeNamePlural: 'HSN Master App'}}
+annotate entity ZMM_APP02_hpv
+    with 
+{
+  @UI.facet: [  {
+                        id:  'Header',
+                        purpose:         #STANDARD,
+                        type:            #IDENTIFICATION_REFERENCE,
+                        label:           'Header',
+                        position:        10
+                        },
+                         {
+                        id:              'Items',
+                        purpose:         #STANDARD,
+                        type:            #LINEITEM_REFERENCE,
+                        label:           ' Items',
+                        position:        20,
+                        targetElement:   '_ITEM'
+                        }]
+@UI.lineItem: [{ position: 10,label: 'Material ' },{ type: #FOR_ACTION , dataAction: 'upexl',label: 'Excel Upload',position: 10 }]
+@UI.identification: [{ position: 10,label: 'Material ' }]
+Matnr;
+@UI.lineItem: [{ position: 20,label: 'HSN Code' }]
+@UI.identification: [{ position: 20,label: 'HSN Code' }]
+Hsn;
+@UI.lineItem: [{ position: 30,label: 'Tax Rate' }]
+@UI.identification: [{ position: 30,label: 'Tax Rate' }]
+Tax;
+@UI.lineItem: [{ position: 40,label: 'Created By' }]
+@UI.identification: [{ position: 40,label: 'Created By' }]
+Createdby;
+@UI.lineItem: [{ position: 50,label: 'Created On' }]
+@UI.identification: [{ position: 50,label: 'Created On' }]
+Createdon;
+@UI.lineItem: [{ position: 60,label: 'Last Changed By' }]
+@UI.identification: [{ position: 60,label: 'Last Changed By' }]
+Lastchngby;
+@UI.lineItem: [{ position: 70,label: 'Last Changed On' }]
+@UI.identification: [{ position: 70,label: 'Last Changed On' }]
+Lastchngat;
+@UI.lineItem: [{ position: 90,label: 'Deletion Mark' }]
+@UI.identification: [{ position:90,label: 'Deletion Mark' }]
+Status;
+@UI.hidden: true
+/* Associations */
+_ITEM;
+    
+}

@@ -1,0 +1,37 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZFI_APP2_RPV //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use action GateOut;
+  use action GateEntry;
+
+  use action Resume;
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Prepare;
+
+  use association _item { with draft; }
+  use association _work { with draft; }
+}
+
+define behavior for ZFI_APP2_CIPV //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _Header { with draft; }
+}
+
+define behavior for ZFI_APP2_SWPV //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _Header { with draft; }
+}

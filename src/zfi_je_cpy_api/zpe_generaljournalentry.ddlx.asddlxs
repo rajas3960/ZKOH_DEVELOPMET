@@ -1,0 +1,61 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZPE_GeneralJournalEntry with
+{
+  @UI.facet: [ { id:              'Entry',
+                    purpose:         #STANDARD,
+                    type:            #IDENTIFICATION_REFERENCE,
+                    label:           'Customer Payment - Payload',
+                    position:        10 } ]
+
+  //    Uuid;
+  @Consumption.valueHelpDefinition: [{ entity: { name:'I_CompanyCode', element: 'CompanyCode'  } }]
+  @UI: { lineItem: [{ position: 10}],selectionField: [{ position: 10 }],identification: [{ position: 20 }] }
+  Bukrs;
+  @UI: { lineItem: [{ position: 20}],selectionField: [{ position: 20 }],identification: [{ position: 30 }] }
+  Gjahr;
+  @UI: { lineItem: [{ position: 30}],selectionField: [{ position: 30 }],identification: [{ position: 40 }] }
+  @Consumption.semanticObject: 'AccountingDocument'
+  Belnr;
+  @Consumption.valueHelpDefinition: [{ entity: { name:'I_Currency', element: 'Currency'  } }]
+  @UI: { lineItem: [{ position: 40}],selectionField: [{ position: 40 }],identification: [{ position: 50 }] }
+  Waers;
+  @UI: { lineItem: [{ position: 50}],selectionField: [{ position: 50 }],identification: [{ position: 60 }] }
+  Bldat;
+  @UI: { lineItem: [{ position: 60}],selectionField: [{ position: 60 }],identification: [{ position: 70 }] }
+  Budat;
+  @UI: { lineItem: [{ position: 70}],identification: [{ position: 80 }] }
+  Bktxt;
+  @UI: { lineItem: [{ position: 90}],identification: [{ position: 90 }] }
+  Awkey;
+  @UI: { lineItem: [{ position: 100}],identification: [{ position: 100 }] }
+  Wrbtr;
+  @UI: { lineItem: [{ position: 110}],identification: [{ position: 110 }] }
+  Sgtxt;
+  @UI: { lineItem: [{ position: 80}],identification: [{ position: 120 }] }
+  @Consumption.valueHelpDefinition: [{ entity: { name:'I_GLAccount', element: 'GLAccount'  } }]
+  Hkont;
+  @UI: { lineItem: [{ position: 120}],identification: [{ position: 130 }] }
+  @Consumption.valueHelpDefinition: [{ entity: { name:'I_CostCenter', element: 'CostCenter'  } }]
+  Kostl;
+  @UI: { lineItem: [{ position: 130}],identification: [{ position: 140 }] }
+  @Consumption.valueHelpDefinition: [{ entity: { name:'I_ProfitCenterStdVH', element: 'ProfitCenter'  } }]
+  Prctr;
+  @UI: { lineItem: [{ position: 140}],identification: [{ position: 150 }] }
+  Hbkid;
+  @UI: { lineItem: [{ position: 150}],identification: [{ position: 160 }] }
+  Hktid;
+  @UI: { lineItem: [{ position: 160}],identification: [{ position: 170 }] }
+  Kunnr;
+  @UI: { lineItem: [{ position: 170}],identification: [{ position: 180 }] }
+  Bbranc;
+  @UI: { lineItem: [{ position: 180}],identification: [{ position: 190 }] }
+  Segment;
+  @UI: { lineItem: [{ position: 190, label: 'Assign Ref.'}],identification: [{ position: 200, label: 'Assign Ref.' }] }
+  Zuonr;
+  //    CreatedBy;
+  //    CreatedAt;
+  //    LastChangedBy;
+  //    LastChangedAt;
+  //    LocalLastChangedAt;
+
+}

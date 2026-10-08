@@ -1,0 +1,26 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Launchpad page for GSTR2 Purchase Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "GSTR2 Purchase Report"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "title": "GSTR2 Purchase Report",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZGSTR2_UI5R",
+            "tileId": "UI5R_03D1F788C01C797DF3395CB5AAA8057D185A3279_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

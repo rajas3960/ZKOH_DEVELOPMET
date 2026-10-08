@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service defination'
+define service ZPRODUCTMASTER_SD {
+  expose ZPRODIUCTMASTER_API_PV;
+}

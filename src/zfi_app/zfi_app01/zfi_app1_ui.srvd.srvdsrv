@@ -1,0 +1,6 @@
+@EndUserText.label: 'RGB/NRGB-Gate In & Out UI Version'
+define service ZFI_APP1_UI {
+  expose ZFI_APP1_RPV  as MainHeader;
+  expose ZFI_APP1_CPIV as MainItem;
+  expose ZFI_APP1_SCPV as MainWork;
+}

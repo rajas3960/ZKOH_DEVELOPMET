@@ -1,0 +1,70 @@
+managed implementation in class zbp_mm_mrp_rcv unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZMM_MRP_RCV  alias _header
+//persistent table zmm_mrp_tb1
+with unmanaged save
+draft table zmmmrp_tb1_d
+lock master total etag Createdat
+authorization master ( instance )
+etag master Createdat
+{
+  create ( authorization : global);
+  update;
+  delete;
+  field ( readonly,numbering : managed ) Recguid;
+  field ( readonly ) Createdby, Createdat, Lastchangedby, Lastchangedat;
+  field (mandatory) Doctype;
+  association _Items { create;with draft; }
+  association _Pritm { create; with draft;}
+  determination ondata on save {create;update;}
+  action ( features : instance ) loadexcel result [1] $self;
+    determination GetData on save { field Recguid; }
+   determination GetData2 on modify { field Doctype; }
+   action ( features : instance ) CrtPr result [1] $self;
+  action ( features : instance ) CrtPo result [1] $self;
+  action ( features : instance ) UpdPr result [1] $self;
+
+  side effects { action loadexcel affects entity _Items;  }
+
+  draft action ( features : instance ) Edit;
+  draft action Resume;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+  field ( readonly ) status;
+  mapping for zmm_mrp_tb1 corresponding;
+
+}
+
+define behavior for ZMM_MRP_ICV1 alias _items
+persistent table zmm_mrp_tb2
+//with unmanaged save
+draft table zmm_mrp_tb2_d
+lock dependent by _header
+authorization dependent by _header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Recguid;
+  field ( readonly :update) Sno;
+  association _header{with draft;}
+  mapping for zmm_mrp_tb2 corresponding;
+}
+
+define behavior for ZMM_MRP_ICV2 alias Pritem
+//persistent table zmm_mrp_tb3
+with unmanaged save
+draft table zmm_mrp_tb3_d
+lock dependent by _header
+authorization dependent by _header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Recguid, Prnum, Pritm;
+  association _header{with draft;}
+  mapping for zmm_mrp_tb3 corresponding;
+}

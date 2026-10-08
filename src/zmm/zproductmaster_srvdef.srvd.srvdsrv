@@ -1,0 +1,4 @@
+@EndUserText.label: 'Product Master Service Defination'
+define service ZProductMaster_SrvDef {
+  expose ZProductMasterCDS as ProductMaster;
+}

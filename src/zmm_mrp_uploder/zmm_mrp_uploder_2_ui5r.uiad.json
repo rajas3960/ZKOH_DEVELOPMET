@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "{{appDescription}}",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Mass PR Uploader"
+  },
+  "ui5AppDetails": {
+    "appId": "masspruploader.zmm"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8C63837B5CE6BD03333904D988ED9819080B20F4_TM",
+    "semanticObject": "zmm_pr_uploader",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8C63837B5CE6BD03333904D988ED9819080B20F4_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Mass PR Uploader",
+        "subtitle": "Mass PR Uploader"
+      }
+    }
+  ]
+}

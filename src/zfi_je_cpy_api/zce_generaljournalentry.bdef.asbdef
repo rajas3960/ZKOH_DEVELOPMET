@@ -1,0 +1,28 @@
+managed with additional save
+implementation in class zbp_ce_generaljournalentry unique;
+strict ( 2 );
+with draft;
+define behavior for ZCE_GeneralJournalEntry alias Jheader
+//persistent table zcje_header
+with unmanaged save
+draft table zcje_header_d
+lock master
+total etag LastChangedAt
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  create;
+  update;
+  delete;
+  field ( readonly, numbering : managed ) Uuid;
+  field ( readonly ) belnr;
+
+  draft action Resume;
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+
+  determination Post on save { create; }
+  mapping for zcje_header corresponding;
+}

@@ -1,0 +1,77 @@
+@Metadata.layer: #PARTNER
+annotate entity ZHR_JV_POST1_PV
+    with 
+{
+     @UI.facet: [ { id:              'Item',
+                  purpose:         #STANDARD,
+                  type:            #IDENTIFICATION_REFERENCE,
+                  label:           'Table',
+                     position:        10 } ]
+    @UI.hidden: true
+    Uuid;
+     @UI:{ lineItem: [{ position:10 , label: 'Company'  }], 
+    identification: [{ position: 10 , label: 'Company' }] }  
+    Company;
+        @UI:{ lineItem: [{ position:20 , label: 'GL Code'  }], 
+    identification: [{ position: 20 , label: 'GL Code' }] }  
+    Glcode;
+        @UI:{ lineItem: [{ position:30 , label: 'Debit'  }], 
+    identification: [{ position: 30 , label: 'Debit' }] }  
+    Debit;
+        @UI:{ lineItem: [{ position:40 , label: 'Credit'  }], 
+    identification: [{ position: 40 , label: 'Credit' }] }  
+    Credit;
+        @UI:{ lineItem: [{ position:50 , label: 'Cost Centre'  }], 
+    identification: [{ position: 50 , label: 'Cost Centre' }] }  
+    Costcentre;
+        @UI:{ lineItem: [{ position:60 , label: 'Journal Entry Type'  }], 
+    identification: [{ position: 60 , label: 'Journal Entry Type' }] }  
+    Journalentrytype;
+        @UI:{ lineItem: [{ position:70 , label: 'Ledger Group'  }], 
+    identification: [{ position: 70 , label: 'Ledger Group' }] }  
+    Ledgergroup;
+        @UI:{ lineItem: [{ position:80 , label: 'Journal Entry Date'  }], 
+    identification: [{ position: 80 , label: 'Journal Entry Date' }] }  
+    Journalentrydate;
+        @UI:{ lineItem: [{ position:90 , label: 'Posting Date'  }], 
+    identification: [{ position: 90 , label: 'Posting Date' }] }  
+    Postingdate;
+        @UI:{ lineItem: [{ position:100 , label: 'Fiscal Period'  }], 
+    identification: [{ position: 100 , label: 'Fiscal Period' }] }  
+    Fiscalperiod;
+        @UI:{ lineItem: [{ position:110 , label: 'Document Header Text'  }], 
+    identification: [{ position: 110 , label: 'Document Header Text' }] }  
+    Documentheadertext;
+        @UI:{ lineItem: [{ position:120 , label: 'Transaction Currency'  }], 
+    identification: [{ position: 120 , label: 'Transaction Currency' }] }  
+    Transactioncurrency;
+        @UI:{ lineItem: [{ position:130 , label: 'Currency Translation Date'  }], 
+    identification: [{ position: 130 , label: 'Currency Translation Date' }] }  
+    Currencytranslationdate;
+        @UI:{ lineItem: [{ position:140 , label: 'Reference Document Number'  }], 
+    identification: [{ position: 140 , label: 'Reference Document Number' }] }  
+    Referencedocumentnumber;
+        @UI:{ lineItem: [{ position:150 , label: 'Tax Fulfillment Date'  }], 
+    identification: [{ position: 150 , label: 'Tax Fulfillment Date' }] }  
+    Taxfulfillmentdate;
+        @UI:{ lineItem: [{ position:160 , label: 'Calculate Tax Automatically'  }], 
+    identification: [{ position: 160 , label: 'Calculate Tax Automatically' }] }  
+   // @Semantics.amount.currencyCode : 'Transactioncurrency'
+    Calculatetaxautomatically;
+        @UI:{ lineItem: [{ position:170 , label: 'Company Name'  }], 
+    identification: [{ position: 170 , label: 'Company Name' }] }  
+    Companyname;
+        @UI:{ lineItem: [{ position:180 , label: 'CostCentre Name'  }], 
+    identification: [{ position: 180 , label: 'CostCentre Name' }] }  
+    Costcentrename;
+     @UI.hidden: true  
+    Lastchangedby;
+       @UI.hidden: true
+    Lastchangedat;
+    @UI.hidden: true 
+    Locallastchanged;
+    @UI.hidden: true
+    /* Associations */
+    _Header;
+    
+}

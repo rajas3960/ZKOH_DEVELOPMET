@@ -1,0 +1,28 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZMM_APP03_PV alias _hdr
+{
+  use create;
+  use update;
+  use delete;
+
+  use action upexl;
+
+  use action Edit;
+  use action Resume;
+  use action Activate;
+  use action Discard;
+  use action Prepare;
+
+  use association _item { create; with draft; }
+}
+
+define behavior for ZMM_APP03_IPV alias _item//alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _HDR { with draft; }
+}

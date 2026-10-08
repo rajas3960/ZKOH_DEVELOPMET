@@ -1,0 +1,46 @@
+managed with additional save
+implementation in class zbp_r_generaljournalentry unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_GeneralJournalEntry alias Jheader
+//persistent table zgje_header
+with unmanaged save
+draft table zgje_header_d
+lock master
+total etag Last_Changed_At
+authorization master ( instance )
+etag master Local_Last_Changed_At
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly, numbering : managed ) Uuid;
+  field ( readonly ) belnr;
+
+  association _Item { create; with draft; }
+
+  draft action Resume;
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+
+  determination Post on save { create; }
+  mapping for zgje_header corresponding;
+}
+
+define behavior for ZR_GeneralJournalEntryItem //alias <alias_name>
+persistent table zgje_item
+draft table zgje_item_d
+lock dependent by _Header
+authorization dependent by _Header
+etag master Item_Last_Changed_At
+{
+  update;
+  delete;
+  field ( readonly ) Uuid;
+  field ( mandatory : create, readonly : update ) Buzei;
+  association _Header { with draft; }
+  mapping for zgje_item corresponding;
+}

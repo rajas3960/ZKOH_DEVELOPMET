@@ -1,0 +1,32 @@
+@Metadata.layer: #CUSTOMER
+@UI.createHidden: true
+@UI.updateHidden: true
+@UI.deleteHidden: true
+annotate entity ZMM_APP03_IPV
+    with 
+{
+ @UI.facet: [ { id:              'Itemtgt',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'HSN Master Item',
+                   position:        10 } ]  
+ 
+    @UI.lineItem: [{ position: 10,label: 'Material ' }]
+@UI.identification: [{ position: 10,label: 'Material ' }]
+Matnr;
+@UI.lineItem: [{ position: 20,label: 'HSN Code' }]
+@UI.identification: [{ position: 20,label: 'HSN Code' }]
+Hsn;
+@UI.lineItem: [{ position: 30,label: 'Tax Rate' }]
+@UI.identification: [{ position: 30,label: 'Tax Rate' }]
+Tax;
+@UI.lineItem: [{ position: 50,label: 'Last Changed On' }]
+@UI.identification: [{ position: 50,label: 'Last Changed On' }]
+Createdon;
+@UI.lineItem: [{ position: 40,label: 'Last Changed By' }]
+@UI.identification: [{ position: 40,label: 'Last Changed By' }]
+Createdby;
+@UI.hidden: true
+    /* Associations */
+    _hdr;
+}

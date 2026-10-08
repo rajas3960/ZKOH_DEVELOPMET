@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition'
+define service ZSTUDENT_ATT_SD {
+  expose ZSTUDENT_ATT_TABL_P;
+  expose ZSTUDENT_ATT_TAB_P;
+}

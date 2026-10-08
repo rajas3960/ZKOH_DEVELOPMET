@@ -1,0 +1,26 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Launchpad page for ORG GSTIN Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "title": "ORG GSTIN"
+  },
+  "sections": [
+    {
+      "id": "SECTION_1",
+      "title": "ORG GSTIN",
+      "visualizations": [
+        {
+          "id": "SECTION_1_VIZ_1",
+          "ladiAssignment": {
+            "ladiId": "ZORG_GSTIN_UI5R",
+            "tileId": "UI5R_0567ED0319BCDC729F2F0110C61675ACEECAA091_AL"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+managed implementation in class zbp_fi_app1_rv unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZFI_APP1_RV alias _HDR
+//persistent table <???>
+with unmanaged save
+draft table zfi_app1_db1
+lock master
+total etag Lastchangedat
+authorization master ( instance )
+etag master Lastchangedat
+
+{
+  create;
+  update( features : instance );
+  delete( features : instance );
+  field ( readonly, numbering : managed ) Uuid;
+  field ( readonly : update )Gptype,Workprocess;
+  field ( readonly ) Gpnum;
+  field ( readonly ) Createdat, Createdby , Lastchangedat, Lastchangedby;
+  field ( readonly ) statustext, Gotno, Gotdat, Gottim;
+
+  association _Item { create( features : instance ); with draft; }
+  association _Work { create( features : instance ); with draft; }
+
+  draft action Resume;
+  draft action ( features : instance )Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+
+  action(features : instance ) GateStatus result [1] $self;
+  determination GetHeader on save { create; field Gpnum; }
+  mapping for zfi_app1_tb1 corresponding;
+
+}
+
+define behavior for ZFI_APP1_CIV alias _ITEM
+//persistent table <???>
+with unmanaged save
+draft table zfi_app1_db2
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update( features : instance );
+  delete( features : instance );
+  field ( readonly ) Uuid,Itemno ;
+  field ( readonly : update ) Transposno ;
+  field ( readonly ) Createdat, Createdby , Lastchangedat, Lastchangedby;
+
+  association _Header {with draft;}
+
+  determination getItem on save  { create; field Itemno; }
+  mapping for zfi_app1_tb2 corresponding;
+
+}
+
+define behavior for ZFI_APP1_SCV alias _WORK
+//persistent table zfi_app1_tb3
+with unmanaged save
+draft table zfi_app1_db3
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update ( features : instance );
+  delete ( features : instance );
+  field ( readonly ) Uuid;
+  field ( readonly : update ) Poorder, Poitem, Documcurrency, Pocost;
+  association _Header { with draft; }
+
+  determination GetWork on save { create; field Poitem; }
+
+  determination updatework on modify {update; field Materialnumber,Poqty,Pounit,Productdes; }
+  mapping for zfi_app1_tb3 corresponding;
+}

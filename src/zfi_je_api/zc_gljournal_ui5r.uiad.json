@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "GL Posting API",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "GL Posting API"
+  },
+  "ui5AppDetails": {
+    "appId": "glpostingapi.project1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A5947FF65332B36D0F45412F7D2B4631B49BD9F3_TM",
+    "semanticObject": "glpostingapi",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A5947FF65332B36D0F45412F7D2B4631B49BD9F3_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GL Posting API"
+      }
+    }
+  ]
+}

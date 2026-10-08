@@ -1,0 +1,86 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZFI_APP2_CIPV
+    with 
+{
+  @UI.facet: [ { id:              'Item',
+                   purpose:         #STANDARD,
+                   type:            #IDENTIFICATION_REFERENCE,
+                   label:           'Standard Items',
+                   position:        10 } ]
+  @UI.hidden: true
+Uuid;
+  @UI: { lineItem: [{ position: 10, label: 'S.No' }],
+  identification: [{ position: 10, label: 'S.No'  }] }
+  @EndUserText.label: 'Item No'
+Itemno;
+  @UI: { lineItem: [{ position: 20, label: 'Asset Code' }],
+  identification: [{ position: 20, label: 'Asset Code'  }] }
+  @EndUserText.label: 'Asset Code'
+Transposno;
+
+  @UI: { lineItem: [{ position: 30, label: 'Asset Description' }],
+  identification: [{ position: 30, label: 'Asset Description'  }] }
+  @EndUserText.label: 'Asset Description'
+Assetmatdes;
+  @UI: { lineItem: [{ position: 40, label: 'Quantity' }],
+  identification: [{ position: 40, label: 'Quantity'  }] }
+  @EndUserText.label: 'Quantity'
+Qty;
+  @UI: { lineItem: [{ position: 50, label: 'UOM' }],
+  identification: [{ position: 50, label: 'UOM'  }] }
+  @EndUserText.label: 'UOM'
+Uom;
+  @UI: { lineItem: [{ position: 60, label: 'Make/Model No' }],
+  identification: [{ position: 60, label: 'Make/Model No'  }] }
+  @EndUserText.label: 'Make/Model No'
+Batch;
+  @UI: { lineItem: [{ position: 70, label: 'From Plant' }],
+  identification: [{ position: 70, label: 'From Plant'  }] }
+  @EndUserText.label: 'From Plant'
+Fromplant;
+  @UI: { lineItem: [{ position: 80, label: 'From Location' }],
+  identification: [{ position: 80, label: 'From Location'  }] }
+  @EndUserText.label: 'Item No'
+Fromlocation;
+  @UI: { lineItem: [{ position: 90, label: 'To Plant' }],
+  identification: [{ position: 90, label: 'To Plant'  }] }
+  @EndUserText.label: 'Item No'
+Toplant;
+  @UI: { lineItem: [{ position: 100, label: 'To Location' }],
+  identification: [{ position: 100, label: 'To Location'  }] }
+  @EndUserText.label: 'Item No'
+Tolocation;
+  @UI: { lineItem: [{ position: 110, label: 'Inventory No' }],
+  identification: [{ position: 110, label: 'Inventory No'  }] }
+  @EndUserText.label: 'Inventory No'
+Inventoryno;
+  @UI: { lineItem: [{ position: 120, label: 'Recived Qty' }],
+  identification: [{ position: 120, label: 'Recived Qty'  }] }
+  @EndUserText.label: 'Recived Qty'
+Recivedqty;
+  @UI: { lineItem: [{ position: 130, label: 'Status' }],
+  identification: [{ position: 130, label: 'Status'  }] }
+  @EndUserText.label: 'Status'
+Overallstatus;
+  @UI: { lineItem: [{ position: 140, label: 'Serial Number' }],
+  identification: [{ position: 140, label: 'Serial Number'  }] }
+  @EndUserText.label: 'Serial Number'
+Serialnumber;
+@UI.hidden: true
+Toplantname;
+@UI.hidden: true
+Fromplantname;
+@UI.hidden: true
+Assetmat;
+@UI.hidden: true
+Createdby;
+@UI.hidden: true
+Createdat;
+@UI.hidden: true
+Lastchangedby;
+@UI.hidden: true
+Lastchangedat;
+@UI.hidden: true
+/* Associations */
+_Header;    
+}

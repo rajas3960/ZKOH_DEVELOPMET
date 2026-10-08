@@ -1,0 +1,42 @@
+@Metadata.layer: #PARTNER
+annotate view Ztaxcode_RPV with
+{
+  @UI.facet: [{ id: 'ID01', type: #COLLECTION, label: 'POS Code Data', position: 10 },
+      { id: 'Idc01', type: #IDENTIFICATION_REFERENCE, parentId: 'ID01' } ]
+  @UI.lineItem: [{ position: 1, label: 'Country Key' }]
+  @UI.identification:  [{ position: 1, label: 'Country Key' }]
+  @EndUserText.label: 'Country Key'
+  Cntyregkey;
+  @UI.lineItem: [{ position: 2, label:  'Taxcode' }]
+  @UI.identification:  [{ position: 2, label:  'Taxcode' }]
+  @EndUserText.label: 'Taxcode'
+
+  Taxcode;
+  @UI.lineItem: [{ position: 3, label:  'Tax Procedure' }]
+  @UI.identification:  [{ position: 3, label:  'Tax Procedure' }]
+  @EndUserText.label: 'Tax Procedure'
+  Zprocedure;
+  @UI.lineItem: [{ position: 4, label:  'Condition Type' }]
+  @UI.identification:  [{ position: 4, label:  'Condition Type' }]
+  @EndUserText.label: 'Condition Type'
+
+  Contype;
+  @UI.lineItem: [{ position: 5, label:  'Tax Rate' }]
+  @UI.identification:  [{ position: 5, label:  'Tax Rate' }]
+  @EndUserText.label: 'Tax Rate'
+
+  Taxate;
+
+
+  @UI.lineItem: [{ position: 6, label:  'Tax Description' }]
+  @UI.identification:  [{ position: 6, label:  'Tax Description' }]
+  @EndUserText.label: 'Tax Description'
+  Taxtype;
+
+  @UI.lineItem: [{ position: 7, label:  'GRMRP' }]
+  @UI.identification:  [{ position: 7, label:  'GRMRP' }]
+  @EndUserText.label: 'GRMRP'
+  grmrp;
+  
+ 
+}

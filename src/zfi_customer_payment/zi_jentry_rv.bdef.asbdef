@@ -1,0 +1,19 @@
+managed implementation in class zbp_i_jentry_rv unique;
+strict ( 2 );
+
+define behavior for ZI_JENTRY_RV //alias <alias_name>
+//persistent table <???>
+with unmanaged save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly ) CompanyCode, FiscalYear, AccountingDocument;
+
+  create;
+  update;
+  delete;
+
+  action ( features : instance ) Post result [1] $self;
+
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Mateerial Consumption Serv Def'
+define service ZMM_MAT_CON_SD {
+  expose ZMM_mat_cons_PROJ as MaterialConsumption;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "HSN VIEW TABLE",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "HSN VIEW TABLE"
+  },
+  "ui5AppDetails": {
+    "appId": "tablehsncust"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D6EE058289990210C1640A1A3CB5CE427E86A7F0_TM",
+    "semanticObject": "ZCUSTOM_HSN_TABLE",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D6EE058289990210C1640A1A3CB5CE427E86A7F0_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "HSN VIEW TABLE"
+      }
+    }
+  ]
+}

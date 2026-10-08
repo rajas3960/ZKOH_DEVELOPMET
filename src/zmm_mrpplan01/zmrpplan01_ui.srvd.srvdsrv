@@ -1,0 +1,6 @@
+@EndUserText.label: 'Mass PR Creation Application UI'
+define service ZMRPPLAN01_UI {
+  expose ZMRPPLAN01_RPV  as MAIN;
+  expose ZMRPPLAN01_IPV1 as LItem;
+  expose ZMRPPLAN01_IPV2 as PRitem;
+}

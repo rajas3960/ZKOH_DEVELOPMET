@@ -1,0 +1,44 @@
+managed implementation in class zbp_hr_jv_post_rv unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZHR_JV_POST_RV //alias <alias_name>
+persistent table zdb_hr_jv_post
+//with unmanaged save
+draft table ZDT_HR_JV_POST
+lock master
+total etag Lastchangedat
+authorization master ( instance )
+etag master Lastchangedat
+{
+ create;
+  update;
+  delete;
+  draft action Resume;
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+    field ( readonly , numbering : managed ) Uuid;
+  field ( readonly ) Lastchangedat,Lastchangedby,Locallastchanged;
+  association _Item { create; with draft; }
+  determination GetData1 on save { field uuid; }
+  action ( features : instance ) PostGI result [1] $self;
+  mapping for zdb_hr_jv_post corresponding;
+}
+
+define behavior for ZHR_JV_POST1_RV //alias <alias_name>
+persistent table zdb_hr_jv_prot1
+draft table ZDT_HR_JV_PROT1
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+   update(features : instance);
+  delete(features : instance);
+  field ( readonly ) Uuid;
+    field (readonly : update ) Company;
+  association _Header{with draft;}
+  action ( features : instance ) PostGM result [1] $self;
+  mapping for zdb_hr_jv_prot1 corresponding;
+}

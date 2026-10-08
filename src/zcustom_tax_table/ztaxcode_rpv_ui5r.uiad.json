@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Tax Details",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Tax Details"
+  },
+  "ui5AppDetails": {
+    "appId": "taxdetails.zfimodule"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D7685C8962E713A29D0E1A19083A0CE2A98EDBDD_TM",
+    "semanticObject": "zfimodule",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D7685C8962E713A29D0E1A19083A0CE2A98EDBDD_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Tax Details",
+        "subtitle": "Tax Details"
+      }
+    }
+  ]
+}

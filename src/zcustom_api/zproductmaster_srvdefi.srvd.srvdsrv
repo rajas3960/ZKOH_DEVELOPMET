@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination For Product Master'
+define service ZProductMaster_SrvDefi {
+  expose Zproduct_MasterPV as ProductMasterAPI;
+}

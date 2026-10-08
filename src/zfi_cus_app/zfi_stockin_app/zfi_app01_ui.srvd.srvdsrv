@@ -1,0 +1,6 @@
+@EndUserText.label: 'service definition'
+define service ZFI_APP01_UI {
+  expose ZFI_APP01_RPV  as MainHead;
+  expose ZFI_APP01_CPV  as MainItem;
+  expose ZFI_APP01_PSCV as MainPo;
+}

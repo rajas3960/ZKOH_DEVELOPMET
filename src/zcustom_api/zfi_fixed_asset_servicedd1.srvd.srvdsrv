@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defenation Fixed Asset Data'
+define service ZFI_FIXED_ASSET_SERVICEDd1 {
+  expose ZFI_FIXED_ASSET_PROJECTION as AssetAPI;
+}

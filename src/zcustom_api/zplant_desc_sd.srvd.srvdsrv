@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defenation Plant Desc'
+define service ZPLANT_DESC_SD {
+  expose ZPLANT_DESC_PROJECTION as PlantDetails;
+}

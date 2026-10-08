@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "GST ITC Reco",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "GST ITC Reco"
+  },
+  "ui5AppDetails": {
+    "appId": "gstitcreco.zgstitc"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_AACA42FD4C79D02839693490FD62B98B668867EF_TM",
+    "semanticObject": "zgst_itc",
+    "action": "view",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_AACA42FD4C79D02839693490FD62B98B668867EF_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GST ITC Reco",
+        "subtitle": "GST ITC Reco"
+      }
+    }
+  ]
+}

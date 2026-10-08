@@ -1,0 +1,5 @@
+@EndUserText.label: 'HSN APP SREVICE DEFINATION'
+define service ZSD_APP02 {
+  expose ZMM_APP02_hpv as MAIN;
+  expose ZMM_APP02_IPV as iTEM;
+}

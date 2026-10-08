@@ -1,0 +1,69 @@
+@Metadata.layer: #PARTNER
+
+@UI: {
+    headerInfo: { typeName: 'Student',
+                 typeNamePlural: 'Student',
+                 title: { type: #STANDARD, label: 'Student', value: 'id' }
+     }
+
+}
+annotate view ZC_STUDENT_5000 with
+{
+
+  @UI.facet: [{ id: 'Student',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Student',
+                position: 10
+            }]
+  @UI: { lineItem:       [ { position: 10, label: 'STUDENT ID'  } ],
+         identification: [ { position: 10, label: 'STUDENT ID' } ]
+   }
+  Id;
+  @UI: { lineItem:   [ { position: 20, label: 'Firstname'  } ],
+     identification: [ { position: 20, label: 'Firstname' } ],
+     selectionField: [ { position: 20  } ]
+       }
+  Firstname;
+  @UI: { lineItem:   [ { position: 30, label: 'Lastname'  } ],
+     identification: [ { position: 30, label: 'Lastname' } ],
+     selectionField: [ { position: 30  } ]
+       }
+  Lastname;
+  @UI: { lineItem:   [ { position: 40, label: 'Age'  } ],
+     identification: [ { position: 40, label: 'Age' } ],
+     selectionField: [ { position: 40  } ]
+       }
+  Age;
+  @UI: { lineItem:   [ { position: 50, label: 'Course'  } ],
+     identification: [ { position: 50, label: 'Course' } ],
+     selectionField: [ { position: 50  } ]
+       }
+  Course;
+  @UI: { lineItem:   [ { position: 60, label: 'Courseduration'  } ],
+     identification: [ { position: 60, label: 'Courseduration' } ],
+     selectionField: [ { position: 60  } ]
+       }
+  Courseduration;
+  @UI: { lineItem:   [ { position: 70, label: 'Status'  } ],
+     identification: [ { position: 70, label: 'Status' } ],
+     selectionField: [ { position: 70  } ]
+       }
+  Status;
+  @UI: { lineItem:   [ { position: 80, label: 'Gender'  } ],
+     identification: [ { position: 80, label: 'Gender' } ],
+     selectionField: [ { position: 80  } ]
+       }
+  Gender;
+  @UI: { lineItem:   [ { position: 90, label: 'Dob'  } ],
+     identification: [ { position: 90, label: 'Dob' } ],
+     selectionField: [ { position: 90  } ]
+       }
+  Dob;
+  @UI: { lineItem:   [ { position: 100, label: 'Lastchangedat'  } ],
+     identification: [ { position: 100, label: 'Lastchangedat' } ],
+     selectionField: [ { position: 100  } ]
+       }
+  Lastchangedat;
+
+}

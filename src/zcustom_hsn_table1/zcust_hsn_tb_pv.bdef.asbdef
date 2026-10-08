@@ -1,0 +1,28 @@
+managed implementation in class zbp_cust_hsn_tb_pv unique;
+strict ( 2 );
+with draft;
+define behavior for ZCUST_HSN_TB_PV //alias <alias_name>
+persistent table zhsn_table
+draft table zhsn_table1
+lock master total etag HSN
+authorization master ( instance )
+//etag master <field_name>
+{
+   create;
+  update;
+  delete;
+  field ( readonly : update ) Hsn, Gstrate;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  mapping for zhsn_table
+
+  {
+   Hsn = hsn;
+   Gstrate =gstrate;
+
+  }
+}

@@ -1,0 +1,122 @@
+managed implementation in class zbp_mrpplan01_rcv unique;
+strict ( 2 );
+with draft;
+define behavior for ZMRPPLAN01_RCV alias Header
+//persistent table zmrpplan01_tb1
+with unmanaged save
+draft table zmrpplan01_dt1
+lock master total etag Recguid
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly ) Recguid, Createdat, Createdby;
+  field ( numbering : managed ) Recguid;
+  //  field ( mandatory : create ) Doctype;
+  field ( mandatory ) Doctype;
+  create;
+  update ( features : instance );
+  delete;
+  association _litem { create; with draft; }
+  association _pritm { create; with draft; }
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+
+  determination GetData on save { field Recguid; }
+  determination GetData2 on modify { field Doctype; }
+
+  action ( features : instance ) CrtPr result [1] $self;
+  action ( features : instance ) CrtPo result [1] $self;
+  action ( features : instance ) UpdPr result [1] $self;
+
+
+  mapping for zmrpplan01_tb1 control zmrpplan01_cx1
+
+    {
+      Createdat  = createdat;
+      Createdby  = createdby;
+      Lastchngat = lastchngat;
+      Lastchngby = lastchngby;
+      Recguid    = recguid;
+      Totprcrt   = totprcrt;
+      Totprrec   = totprrec;
+      Totpocrt   = totpocrt;
+      Totporec   = totporec;
+      Status     = status;
+      Doctype    = doctype;
+      Dtyptxt    = dtyptxt;
+      Srcdtm     = srcdtm;
+    }
+
+}
+
+define behavior for ZMRPPLAN01_ICV1 alias Litem
+persistent table zmrpplan01_tb2
+//with unmanaged save
+draft table zmrpplan01_dt2
+lock dependent by _hdr
+authorization dependent by _hdr
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Recguid;
+  field ( readonly : update ) sno;
+  association _hdr { with draft; }
+
+  //  determination GetFile on save { field Recguid; }
+
+  mapping for zmrpplan01_tb2 control zmrpplan01_cx2
+    {
+      Delvdat  = delvdat;
+      Material = material;
+      Plant    = plant;
+      Recguid  = recguid;
+      Reqqty   = reqqty;
+      Sloc     = sloc;
+      Supplnt  = supplnt;
+      Uom      = uom;
+      Issloc   = issloc;
+      Matdesc  = matdesc;
+      Sno      = sno;
+      Price    = price;
+    }
+
+
+}
+
+define behavior for ZMRPPLAN01_ICV2 alias Pritm
+//persistent table zmrpplan01_tb3
+with unmanaged save
+draft table zmrpplan01_dt3
+lock dependent by _hdr
+authorization dependent by _hdr
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Recguid, Prnum, Pritm;
+  association _hdr { with draft; }
+
+  mapping for zmrpplan01_tb3 control zmrpplan01_cx3
+    {
+      Prnum    = prnum;
+      Pritm    = pritm;
+      Delvdat  = delvdat;
+      Material = material;
+      Matdesc  = matdesc;
+      Issloc   = issloc;
+      Plant    = plant;
+      Recguid  = recguid;
+      Reqqty   = reqqty;
+      Sloc     = sloc;
+      Supplnt  = supplnt;
+      Uom      = uom;
+      Doctyp   = doctyp;
+      Price    = price;
+    }
+
+}
